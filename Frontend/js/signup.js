@@ -20,5 +20,16 @@ const res =await fetch("http://localhost:9000/users",{
 })
 const data = await res.json()
 console.log(data)
+if(res.status==201){
+    Swal.fire({
+        title:"Registration was Successful",
+        icon:'success'
+    })
+}else{
+    Swal.fire({
+        title:"Registration was Failed",
+        icon:'error'
+    })
+}
 
 })
